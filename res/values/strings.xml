@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">WhoWroteIt</string>
+    <string name="app_name">Project3</string>
     <string name="link">Click Here to See All 2 Letter Country Codes <a href="https://www.iban.com/country-codes" target="_top">https://www.iban.com/country-codes</a></string>
 </resources>
