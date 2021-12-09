@@ -37,9 +37,16 @@ public class MainActivity extends AppCompatActivity {
         FetchCelebs fb = new FetchCelebs(mCelebText);
         String[] celebNameArray = fb.execute(queryString).get();
         System.out.println("Array in main");
-        for (int i = 0; i < celebNameArray.length; i++) {
-            System.out.println(celebNameArray[i]);
+
+        //makes sure empty input doesn't crash app
+        try {
+            for(int i = 0; i < celebNameArray.length; ++i) {
+                System.out.println(celebNameArray[i]);
+            }
+        } catch (Exception var6) {
+            System.out.println(var6);
         }
+
         Intent intent = new Intent(this, CelebrityDisplay.class);
         intent.putExtra("Array", celebNameArray);
         startActivity(intent);
